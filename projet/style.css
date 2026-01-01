@@ -1,0 +1,1839 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(31, 31, 31);
+    background-color: rgb(223, 245, 252);
+    font-size: 1em;
+    
+}
+#acc{
+    background-image: url('Images/acc.webp');
+    background-size: 100% 110% ;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+}
+nav{
+    width: 100%;
+    background-color: rgb(103, 213, 247);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
+    font-size: 1.1em;
+}
+nav h1{
+    font-family: 'Playfair Display' , sans-serif ;
+    font-size:calc(1.7rem + 1.7vw);
+    margin: 0px;
+    padding-bottom: 10px;
+    font-weight:900;
+    color: rgb(31, 31, 31);
+}
+nav > ul{
+    padding: 0px;
+    margin: 0px;
+    font-weight: 600;
+}
+nav > ul > li{
+    float: left;
+    padding: 25px 30px;
+    position: relative;
+}
+#icons{
+    display: none;
+}
+nav li{
+    list-style: none;
+}
+.sousmenu{
+    display: none;
+    background-color:rgb(139, 220, 245);
+    width: 225px;
+    padding: 0px;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+}
+nav > ul > li:hover{
+    background-color: rgb(139, 220, 245);
+    border-top: 2px solid black ;
+    padding: 23px 30px 25px 30px;
+    
+}
+nav li:hover .sousmenu{
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    left: 0px;
+}
+.sousmenu li{
+    border-bottom: 1px solid white;
+    padding: 15px 30px;
+    text-align: left;
+}
+.sousmenu li:hover{
+    background-color: rgb(182, 233, 248);
+}
+header{
+    padding: 15vh 5px 70vh 5px;
+    justify-content: center;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.822);
+    font-size: calc(1rem + 1vw);
+    font-weight: 700;
+}
+header h1{
+    font-size:calc(1.5rem + 1.7vw);
+    margin: 1%;
+}
+header p{
+    margin: 0%;
+    line-height: 1.5;
+}
+.deplacer{
+    position: relative;
+    margin-top: -350px;
+    display: flex;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+    
+}
+.itin{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: rgb(103, 213, 247);
+    box-shadow: 25px 30px 35px rgba(0,0,0,0.8);
+    padding: 0px 40px 40px 40px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+.itin form{
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+.parOuArr{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0px 30px 0px;
+}
+.parOuArr label{
+    width: 100px;
+    background-color: white;
+    text-align: center;
+    border-radius: 5cap;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.parOuArr label:hover{
+    background-color: rgb(223, 223, 223);
+}
+.parOuArr input[type="radio"]:checked + label{
+    background: rgb(138, 138, 138);
+}
+.parOuArr input[type="radio"]{
+    display: none;
+}
+.horr{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: rgb(103, 213, 247);
+    box-shadow: 25px 30px 35px rgba(0,0,0,0.8);
+    padding: 0px 40px 40px 40px;
+}
+.horr form{
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+form input,select{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9em;
+    width: 100%;
+    border:1px solid white;
+    border-radius: 10cap;
+    padding: 10px 20px;
+    margin-bottom: 18px;
+    margin-top: 8px;
+}
+form input{
+    width: 90%;
+}
+.boutton{
+    width: 150px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 20px;
+    padding: 8px;
+    background-color:white;
+    color: black;
+    font-weight: 700;
+    border:1px solid white;
+    border-radius: 10cap;
+    transition: 0.2s;
+}
+.boutton:hover{
+    background-color: rgb(209, 209, 209);
+    letter-spacing: 1px;
+}
+.horr hr{
+    width: 100%;
+    border: 1px solid white;
+    margin: 40px 0px 20px 0px;
+}
+.itin hr{
+    width: 100%;
+    border: 1px solid white;
+    margin: 20px 0px;
+}
+footer{
+    background-color: rgb(49, 49, 49);
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.liens{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -3%;
+}
+.echange img{
+    margin: 30px 15px 0px 15px;
+    transition: 0.2s;
+}
+.echange img:hover{
+    filter:invert(0.7);
+}
+.echange .cont{
+    font-size: 1em;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px 80px;
+    background-color:white;
+    color: black;
+    font-weight: 700;
+    border:1px solid white;
+    border-radius: 10cap;
+    transition: 0.2s;
+}
+.echange .cont:hover{
+    background-color: rgb(209, 209, 209);
+    letter-spacing: 1px;
+    padding: 10px 73px;
+}
+footer ul li{
+    list-style: none;
+    padding: 0px 0px 5px 0px;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+footer a:hover{
+    color: rgb(2, 14, 56);
+}
+footer .logo{
+    padding: 0%;
+    margin: 0%;
+}
+.dim{
+    width: 250px;
+    height: 200px;
+}
+
+.itinh1{
+    margin: 30px;
+    font-size:calc(1.5rem + 1vw);
+
+}
+.rech{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    border-radius: 3cap 0cap 0cap 3cap;
+    background-color: rgb(103, 213, 247);
+    padding: 25px;
+}
+.rech form{
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+}
+#map{ 
+    min-height: 600px;
+    width: 75%;
+    border-radius: 0cap 3cap 3cap 0cap;
+    z-index: 0;
+}
+#carte{
+    min-height: 600px;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 3cap;
+    z-index: 0;
+    margin-bottom: 50px;
+}
+.itin2{
+    display: flex;
+    width: 98%;
+    margin: 0px auto 60px auto;
+}
+#cnx{
+    background-image: url(Images/connexion.png);
+    background-size:100% 140%;
+    background-repeat: no-repeat;
+}
+.retour{
+    padding:0px 0px 0px 30px;
+    width: 230px;
+    transition: 0.3s;
+}
+.retour a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    transition: 0.2s;
+    font-size: calc(0.8rem + 0.2vw);
+}
+.retour a h3{
+    margin-bottom: 0px;
+}
+.retour a:hover{
+    color: black;
+    letter-spacing: 0.8;
+}
+.conx{
+    margin-top: 30px;
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 25px 50px 25px;
+    backdrop-filter: blur(10px);
+    border: solid white 0.1pt;
+    border-radius: 2cap;
+    color: white;
+    font-weight: 600;
+    font-size: calc(0.8rem + 0.3vw);
+}
+.conx h1{
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: calc(1.5rem + 1vw);
+}
+.conx a{
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.conx p{
+    font-size: calc(0.8rem + 0.3vw);
+}
+.conx a:hover{
+    color: black;
+}
+#conxB{
+    width: 250px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    transition: 0.2s;
+}
+#conxB:hover{
+    background-color: rgb(144, 212, 252);
+    letter-spacing: 0.5px;
+}
+.btn{
+    justify-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.conx form input{
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9em;
+    width: 100%;
+    border:1px solid white;
+    border-radius: 10cap;
+    padding: 10px 20px;
+    margin-bottom: 18px;
+    margin-top: 8px;
+}
+.conx form input[type="password"]{
+    margin-bottom: 10px;
+}
+.conx p{
+    text-align: center;
+    font-weight: 500;
+}
+#iconR{
+    display: block;
+    cursor: pointer;
+}
+#iconR:before{
+    content: "\293F";
+    font-size: 35px;
+    font-weight: 1000;
+}
+.mesErr{
+    color: rgb(255, 0, 0);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+}
+.mesSucc{
+    color: rgb(14, 247, 14);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+}
+#inscr{
+    background-image: url(Images/inscription.jpg);
+    background-size:100% 140%;
+    background-repeat: no-repeat;
+}
+#inscr h1, #inscr p{
+    text-align: center;
+}
+#inscr h1{
+    margin-bottom: 50px;
+    font-size: calc(1.5rem + 1vw);
+}
+.insc{
+    margin-top: 30px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 25px 50px 25px;
+    backdrop-filter: blur(10px);
+    border: solid white 0.1pt;
+    border-radius: 2cap;
+    color: white;
+    font-weight: 600;
+    font-size: calc(0.8rem + 0.3vw);
+}
+.inscform{
+    display: flex;
+}
+.insc a{
+    color: white;
+    text-decoration: none;
+}
+.insc a:hover{
+    color: black;
+}
+.backgr{
+    background-image: url(Images/titre.jpg);
+    background-size: cover;
+    background-color: white;
+    background-repeat: repeat;
+}
+.titre{
+    padding: 10px;
+    backdrop-filter: blur(3px);
+    color: black;
+}
+.titre h1{
+    font-size:calc(1.3rem + 1.7vw);
+}
+.titre p{
+    padding: 0px 20px;
+    font-weight: 500;
+    font-size:calc(0.6rem + 1.2vw);
+    line-height: 1.5em;
+}
+.titre hr{
+    color: black;
+    border: solid black 1px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.criteres{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    width: 90%;
+}
+.table h3{
+    margin: 0px;
+}
+.labelRadio{
+    border-radius: 5cap;
+    text-align: center;
+    width: 70%;
+    background-color: rgb(223, 246, 253);
+    font-weight: 500;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transition: 0.2s;
+}
+.labelRadio:hover{
+    background-color: rgb(103, 213, 247);
+}
+.table input[type="radio"]:checked + .labelRadio{
+    background: rgb(103, 213, 247);
+    color: black;
+    border: none;
+}
+.table input[type="radio"]{
+    display: none;
+}
+.table{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+tr{
+    height: 100px;
+}
+.formSelect{
+    display: none;
+}
+.filtr{
+    width: 150px;
+    font-size: 1.1em;
+    padding: 15px;
+    background-color: rgb(103, 213, 247);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.filtr:hover{
+    letter-spacing: 1px;
+    background-color: rgb(182, 233, 248);
+
+}
+.btnTarif{
+    margin-top: 30px;
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+}
+.resultats{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;    
+}
+.resultat{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-areas: 
+    "resulimg descrip"
+    "resulimg prix";
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 80% 20%;
+    background: white;
+    border-radius: 1cap;
+    margin-bottom: 35px;
+    box-shadow: 25px 30px 35px 25px rgba(0,0,0,0.8);
+}
+.resulimg{
+    grid-area: resulimg;
+}
+.image{
+    width: 100%;
+    height: 100%;
+    border-radius: 1cap 0cap 0cap 1cap;
+}
+.descrip{
+    grid-area: descrip;
+    padding: 10px;
+}
+.prix{
+    grid-area: prix;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.prix div{
+    font-weight: bolder;
+    padding: 10px 20px;
+    border-radius: 5cap;
+    border: 1px solid rgb(103, 213, 247) ;
+    background-color: rgb(103, 213, 247);
+}
+.prix input{
+    width: 140px;
+    text-align: center;
+    font-weight: bolder;
+    padding: 10px;
+    margin: 0px;
+    border-radius: 5cap;
+    border: 1px solid rgb(103, 213, 247) ;
+    background-color: rgb(103, 213, 247);
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.2s;
+}
+.prix form{
+    padding: 0px;
+    margin: 0px;
+}
+.prix input:hover{
+    background-color: rgb(182, 233, 248);
+    border: 1px solid black;
+    letter-spacing: 1px;
+}
+.restxt{
+    margin: 40px 20px;
+}
+.Iresultat{
+    display: grid;
+    grid-template-areas: 
+    "dirligne dirligne"
+    "icon arrdep"
+    "bouton bouton"
+    "details details";
+    grid-template-columns: 10% 88%;
+    gap: 5px;
+    background-color: white;
+    border-radius: 2cap;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 7px;
+    margin-bottom: 10px;
+}
+.ligne{
+    grid-area: dirligne;
+}
+.icon{
+    grid-area: icon;
+}
+.arrdep{
+    grid-area: arrdep;
+    text-align: left;
+    padding-top: 2%;
+    padding-left: 3%;
+}
+#Ibouton{
+    grid-area: bouton;
+    display: flex;
+    justify-content: center;
+}
+#Ibouton button{
+    font-size: 1em;
+    background-color: rgb(103, 213, 247);
+    padding: 7px;
+    border: none;
+    border-radius: 5cap;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#Ibouton button:hover{
+    background-color: rgb(201, 201, 201);
+}
+#details{
+    grid-area: details;
+    display: none;
+}
+#details.afficher{
+    display: inline;
+}
+.aucun{
+    text-align: center;
+    margin-top: 30px;
+}
+.hform{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    border-radius: 3cap;
+    background-color: rgb(103, 213, 247);
+    padding: 0px 40px 40px 40px;
+    margin: 0px 0px 30px 30px;
+}
+.hform h1{
+    font-size: calc(1.2rem + 1vw);
+}
+.hform hr{
+    width: 100%;
+    border: 1px solid white;
+    margin: 40px 0px 20px 0px;
+}
+.horbtn{
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+.horh1{
+    font-size:calc(1.5rem + 1vw);
+    margin: 30px ;
+}
+.horpage{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+.urbain{
+    width: 70%;
+    text-align: center;
+}
+.urbain img{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 3cap;
+}
+.urbain p{
+    margin: 10px 25px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 1.5em;
+    line-height: 1.5;
+}
+.elignes{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    flex-direction: column;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.hlignes{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.hlignes label{
+    padding: 0px;
+    padding-top: 10px;
+    border: black 1px solid;
+    border-radius: 2cap;
+    cursor: pointer;
+    width: 130px;
+    margin-bottom: 40px;
+    transition: 0.2s;
+    background-color: white;
+}
+.hlignes label:hover{
+    background-color: rgb(139, 220, 245);
+}
+.hlignes input[type="radio"]:checked + label{
+    background-color: rgb(103, 213, 247);
+    border: white 1px solid;
+}
+.hlignes input[type="radio"]{
+    display: none;
+}
+.hligne ul{
+    text-align: left;
+    list-style:disc;
+    position: relative;
+    padding: 0px;
+    margin-left: 30px;
+}
+.hbtn{
+    display: flex;
+    align-items: center;
+}
+.hbtn .boutton{
+    background-color: rgb(103, 213, 247);
+    font-size: 1.2em;
+    padding: 15px;
+}
+.hbtn .boutton:hover{
+    background-color: rgb(138, 138, 138);
+}
+.htitre{
+    margin-bottom: 5px;
+}
+.hresultat{
+    width: 70%;
+    padding-left: 20px;
+    padding-right: 30px;
+}
+.hresultat table td,.hresultat table th{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    height: 30px;
+}
+.hresultat table tr{
+    padding: 0px;
+    margin: 0px;
+    height: 20px;
+    background-color: rgb(139, 220, 245);
+    
+}
+.hresultat h1{
+    margin-bottom: 30px;
+}
+.hresultat h3{
+    margin-left: 20px;
+}
+.hresultat img{
+    float: left;
+    margin-right: 20px;
+    width: 45px;
+    height: 45px;
+    margin-top: -7px; 
+}
+.hresultat table{
+    margin-top: 30px;
+    width: 100%;
+    font-size: calc(0.5rem + 0.7vw);
+}
+.hres{
+    width: auto;
+    display: grid;
+    grid-template-areas: 
+    "hicon htitr"
+    "hicon hheure";
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 1cap;
+    text-align: left;
+    grid-gap: 15px;
+    margin-left: 30px;
+    grid-template-columns: 10% 90%;
+    margin-bottom: 30px;
+    background-color: white;
+}
+.hresimg{
+    grid-area: hicon;
+}
+.hresimg img{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+.hrestitre{
+    grid-area: htitr;
+}
+.hresheures{
+    grid-area: hheure;
+}
+input[type="file"]{
+    background-color: white;
+    color: gray;
+}
+#profhead{
+    padding: 0px;
+    margin: 0px;
+    height: 300px;
+}
+#profil{
+    background-image: url(Images/profil.jpg);
+    background-repeat: no-repeat;
+    color: white;
+    background-size: 100% 110vh;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#profilint{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    backdrop-filter: brightness(30%);
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prflh1{
+    font-size:calc(1.3rem + 0.9vw);
+    margin: 30px ;
+    text-align: center;
+}
+.prfh1{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+.prfh1 h1{
+    font-size: calc(1.3rem + 0.9vw);
+    letter-spacing: 5px;
+    width: 200px;
+    padding-bottom: 10px;
+    border-bottom:rgb(103, 213, 247) solid 4px; 
+    
+}
+.ttprofil{
+    display: flex;
+    width:95%;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 100px;
+}
+.crdprofil{
+    width: 400px;
+    margin-left: auto;
+    margin-top: 40px;
+    margin-right: auto;
+    line-height: 1.5;
+}
+.crdprofil form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px ;
+}
+.prflbtn{
+    width: 150px;
+    background-color: rgb(103, 213, 247);
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.2s;
+}
+.prflbtn:hover{
+    background-color: rgb(182, 233, 248);
+    border: solid black 1px;
+    letter-spacing: 1px;
+}
+.crdsprofil img{
+    width: calc(200px + 10vw);
+    height: calc(200px + 20vh);
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cntprofil{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.cntprofil input[type="text"], .modifier input{
+    background-color: white;
+    border: solid 1px gray;
+    border-radius: 3px;
+    font-size: 1em;
+    margin-top: 10px;
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.cntprofil textarea{
+    background-color: white;
+    border: solid 1px gray;
+    border-radius: 3px;
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 10px;
+}
+.ttprofil h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.cntprofil input[type="submit"], .modifier input[type="submit"], .personnes input[type="submit"], .send input{
+    width: 120px;
+    background-color: rgb(103, 213, 247);
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: 0.2s;
+    border-radius: 5cap;
+    border: solid rgb(223, 245, 252) 1px;
+}
+.cntprofil input[type="submit"]:hover, .modifier input[type="submit"]:hover, .discussion input:hover, .personnes input[type="submit"]:hover, .send input:hover{
+    background-color: rgb(182, 233, 248);
+    border: solid black 1px;
+    letter-spacing: 1px;
+}
+.cntprofil div, .modifier div{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.modifier{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.modifier label{
+    font-weight: bold;
+}
+.message{
+    font-size: 1em;
+    display: flex;
+    text-align: left;
+    line-height: 2.0;
+    padding: 0px;
+    width: 300px;
+}
+.messages{
+    width: 100%;
+}
+.messages h3{
+    text-align: center;
+}
+.message img{
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+.msgetbtn{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 3px;
+    margin-bottom: 25px;
+    padding: 10px;
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+}
+.rpndr{
+    display: flex;
+    width: auto;
+    padding: 1px;
+    margin-top: 5px;
+    height: 50px;
+}
+.rpndr input, .discussion input{
+    width: 120px;
+    background-color: rgb(103, 213, 247);
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.2s;
+    border-radius: 5cap;
+    border: solid rgb(223, 245, 252) 1px;
+    text-align: center;
+}
+.rpndr input:hover{
+    background-color: rgb(182, 233, 248);
+    border: solid black 1px;
+    letter-spacing: 1px;
+    width: 125px;
+    text-align: center;
+    
+}
+.destinataire{
+    padding: 10px;
+    margin-bottom: 5px;
+    box-shadow: 0px 3px 3px rgba(168, 168, 168, 0.8);
+    position: sticky;
+    top: 0;
+    background-color: white;
+    height: 60px;
+}
+.discussions{
+    width: 73%;
+}
+.destinataire img{
+    float: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.descor{
+    padding-top: 4px;
+    line-height: 1.7;
+    font-size: 1em;   
+}
+.elem{
+    display: flex;
+    align-items: center;
+}
+.elem h3{
+    width: 200px;
+}
+.elem p{
+    width: 100%;
+}
+.discussion{
+    width: auto;
+    margin-left: 60px;
+    margin-right: 20px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: solid 3px rgb(103, 213, 247);
+    margin-bottom: 50px;
+    
+}
+.discussion textarea{
+    background-color: white;
+    border: solid 1px gray;
+    border-radius: 3px;
+    width: 95%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 25px;
+}
+.discussion form div, .personnes form div{
+    display: flex;
+    justify-content: center;
+}
+.pagereponse{
+    display: flex;
+    
+}
+.personnes input[type="text"]{
+    width: 83%;
+    margin: 0px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+.personnes{
+    padding: 15px;
+    margin: 0px;
+    width: 25%;
+    background-color: white;
+    border-right: solid 1px gray;
+}
+.gens{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.gens h3{
+    text-align: center;
+}
+.msgetvr{
+    width: auto;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.msgetvr:hover{
+    background-color: rgb(231, 231, 231);
+    box-shadow: 2px 2px 2px 2px rgb(122, 122, 122) ;
+}
+.msgetvr strong{
+    width: 150px;
+}
+.msgetvr img{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    float: left;
+}
+.msgetvr input[type="submit"]{
+    width: 70px;
+    height: 30px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+.messagerie{
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    background-color: white;
+    margin-bottom: 50px;
+}
+.amessagerie{
+    width: 75%;
+    background-color: white;
+    padding-bottom: 40px;
+}
+.mdestinataire{
+    padding: 10px;
+    margin-bottom: 5px;
+    box-shadow: 0px 3px 3px rgba(168, 168, 168, 0.8);
+    position: sticky;
+    top: 0;
+    background-color: white;
+    height: 60px;
+}
+.mdestinataire img{
+    float: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.mdescor{
+    padding-top: 10px;
+}
+.mdescor p{
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.8em;
+    margin-top: 3px;
+}
+.mdiscussion form div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.mdiscussion form div input[type="submit"]{
+    width: 130px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: 0.2s;
+    border-radius: 5cap;
+    margin: 0px;
+    background-color: rgb(53, 88, 245);
+    color: white;
+    border: 1px solid rgb(53, 88, 245);
+}
+.mdiscussion form div input[type="submit"]:hover{
+    border: solid white 1px;
+    background-color: rgb(95, 124, 255);
+}
+.mdiscussion form div input[type="text"]{
+    margin: 0px;
+    border: 1px solid gray;
+    width: 87%;
+}
+.mdiscussion form div h4{
+    margin: 0px;
+    padding: 0px;
+    width: 120px;
+}
+.mdiscussion{
+    padding: 20px; 
+    padding-bottom: 0px;  
+}
+.mdate{
+    text-align: center;
+    margin: 0px;
+}
+.mmsg{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 10px;
+}
+.mmsg div{
+    background-color: rgb(53, 88, 245);
+    padding: 10px;
+    width: 500px ;
+    color: white;
+    border-radius: 2cap;
+    font-size: 0.9em;
+}
+.mmsg div strong{
+    font-weight: 600;
+}
+.mreponse{
+    display: flex;
+}
+.mrepondre{
+    margin-top: 40px;
+    padding: 20px;
+    box-shadow: 0px -3px 3px rgba(168, 168, 168, 0.8);
+}
+.mrepondre div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.mrepondre h4{
+    margin: 0px;
+    padding: 0px;
+    width: 120px;
+}
+.mreponse div{
+    background-color: rgb(221, 221, 221);
+    padding: 10px;
+    width: 500px ;
+    color: black;
+    border-radius: 2cap;
+    font-size: 0.9em;
+}
+.mrepondre input[type="text"]{
+    width: 100%;
+    border-radius: 2cap;
+    border: 1px solid gray;
+    margin: 0px;
+}
+.send{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+.send input[type="submit"]{
+    margin: 0px;
+    background-color: rgb(53, 88, 245);
+    color: white;
+}
+.titrepage{
+    display: flex;
+    flex-direction: column;
+    margin : 20px 0px 40px 0px;
+    padding: 0px;
+    gap: 7px;
+}
+.utitre{
+    padding: 20px;
+    display: grid;
+    grid-template-areas: 
+    "timage ttitre"
+    "tcordon tlogo"
+    "validite tlogo";
+    grid-template-columns: 36% 60%;
+    grid-gap: 7px;
+    border-radius: 3cap;
+    background:linear-gradient(rgb(228, 246, 252), rgb(103, 213, 247));
+    box-shadow: 15px 20px 25px rgba(0,0,0,0.8);
+    width: 430px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(103, 213, 247);
+    border: 1px solid black;
+}
+.titreimg{
+    grid-area: timage;
+    padding: 0px;
+    margin: 0px;
+}
+.titreimg img{
+    width: 120px;
+    height: 120px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 1cap;
+    
+}
+.titretext{
+    grid-area: ttitre;
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+.titrecor{
+    grid-area: tcordon;
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+}
+.finvalidite{
+    grid-area: validite;
+    padding: 0px;
+    margin: 0px;
+}
+.titrelogo{
+    grid-area: tlogo;
+    padding-top: 20px;
+    margin: 0px;
+    text-align: center;
+    padding-left: 50px;
+    font-size: 0.8em;
+}
+.titrelogo h2{
+    padding: 0px;
+    margin: 0px;
+    letter-spacing: 7px;
+    font-size: 1.8em;
+    font-weight: bolder;
+}
+.confirmation{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+.confirmation input, .confirmation .annuler a{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 120px;
+    background-color: rgb(103, 213, 247);
+    border-radius: 5cap;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    border: 1px solid rgb(103, 213, 247);
+    margin: 0px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 600;
+    transition: 0.2s;
+}
+.confirmation input:hover, .confirmation .annuler a:hover{
+    background-color: rgb(182, 233, 248);
+    letter-spacing: 1px;
+    border: 1px solid black;
+}
+.annuler{
+    display: flex;
+    align-items: center;
+}
+.mestitres{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+.afftable table{
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px;
+}
+.afftable table tr{
+    height: 40px;
+    background-color: #fff;
+}
+.afftable table td{
+    padding: 10px;
+}
+.afftable table th{
+    background-color: rgb(138, 138, 138);
+    text-align: left;
+    padding: 10px;
+}
+.auctitre{
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 700;
+    height: 50px;
+}
+.afftablereduit{
+    display: none;
+}
+@media screen and (max-width: 1150px){
+    nav  ul{
+        position:absolute;
+        left: -200px;
+        top: 8vh;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(103, 213, 247);
+        z-index: 100;
+        transition: 0.5s;
+    }
+    nav ul li{
+        width: 100%;
+        padding: 25px 0px;
+        text-align: center;
+        border-bottom: 1px solid white;
+    }
+    nav ul li:hover{
+        padding: 23px 0px 25px 0px;
+    }
+    nav li:hover .sousmenu{
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .sousmenu li{
+        width: 100%;
+        text-align: center;
+        padding: 25px 0px;
+    }
+    .sousmenu li:hover{
+        padding: 25px 0px;
+    }
+    #icons{
+        display: block;
+        cursor: pointer;
+    }
+    #icons:before{
+        content: "\2630";
+        font-size: 30px;
+    }
+    .active #icons:before{
+        content: "\2715";
+    }
+    .active ul{
+        left: 10%;
+        width: 80%;
+    }
+    .itinh1{
+        text-align: center;
+    }
+    .table{
+        width: 100%;
+    }
+    .hform{
+        width: 35%;
+        padding: 0px 20px 50px 10px;
+    }
+    .ttprofil{
+        gap: 0px;
+    }
+    .msgetbtn{
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .message{
+        padding: 0px;
+        width: 250px;
+    }
+    .messagerie{
+        width: 95%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .discussions{
+        width: 85%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .discussion{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    .gens{
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-left: none;
+        margin-bottom: 10px;
+        gap: 15px;
+    }
+    .msgetvr{
+        margin-bottom: 10px;
+        width: 200px;
+    }
+    .mdiscussion form div input[type="text"]{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 881px){
+    .deplacer{
+        flex-direction: column;
+        width: 100%;
+        margin: 0px;
+    }
+    .boutton{
+        width: 150px;
+    }
+    .itin, .horr{
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 20px;
+        padding: 0px 10px 20px 10px;
+    }
+    .itin input, .horr input{
+        width: 80%;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .itin2{
+        flex-direction: column;
+        width: 100%;
+        margin: 0px;
+    }
+    .rech{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 3cap;
+        margin-bottom: 30px;
+    }
+    #map{
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 3cap;
+        margin-bottom: 30px;
+    }
+    .conx h1, #inscr h1{
+        margin-bottom: 20px;
+    }
+    .itinh1{
+        text-align: center;
+    }
+    .rech form input{
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .echange .cont{
+        padding: 10px 60px;
+    }
+    .echange .cont:hover{
+        padding: 10px 53px;
+    }
+    .echange img{
+        margin: 30px 7px 0px 7px;
+    }
+    .conx{
+        width: 70%;
+    }
+    .resultat{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .formSelect{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .tarifForm{
+        display: none;
+    }
+    .hform{
+        width: 90%;
+        padding: 0px 10px 50px 10px;
+        margin-left: auto;
+        margin-right: auto;   
+    }
+    .urbain{
+        display: none;
+    }
+    .horpage{
+        flex-direction: column;
+    }
+    .hresultat {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hresimg img{
+        width: 40px;
+        height: 40px;
+    }
+    .hres{
+        margin-left: 5px ;
+        margin-right: 5px;
+        padding: 3px;
+    }
+    .inscform{
+        flex-direction: column;
+    }
+    .inscform1{
+        display: flex;
+        flex-direction: column;
+    }
+    #profil{
+        background-size: 100% 50vh;
+    }
+    #profhead{
+        height: 200px;
+    }
+    .ttprofil{
+        flex-direction: column;
+    }
+    .crdsprofil{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .crdsprofil img{
+        width: calc(100px + 40vw);
+        height: calc(100px + 40vw);
+        margin-left: calc(0px + 10vw);
+        margin-right: auto;
+    }
+    .crdprofil{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0px;
+    }
+    .cntprofil input[type="text"], .cntprofil textarea{
+        width: 85%;
+    }
+    .modifier{
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .message{
+        padding: 0px;
+        border: none;
+    }
+    .melem, .elem{
+        flex-wrap: wrap;
+    }
+    .elem p{
+        margin-left: 10px;
+        
+    }
+    .elem h3{
+        padding: 0px;
+        margin: 0px;
+
+    }
+    .afftable table{
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0px;
+    }
+    .mdiscussion form div input[type="text"]{
+        width: 65%;
+    }
+}
+@media screen and (max-width: 800px){
+        .pagereponse{
+            flex-direction: column;
+            gap: 15px;
+        }
+        .personnes{
+            width: 100%;
+        }
+        .amessagerie{
+            width: 100%;
+        }
+        .mdiscussion form div h4{
+            display: none;
+        }
+    }   
+@media screen and (max-width: 500px){
+    .afftable{
+        display: none;
+    }
+    .afftablereduit{
+        display: block;
+        width: 95%;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0px;
+    }
+    .afftablereduit table{
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .afftablereduit table tr{
+        height: 40px;
+        background-color: #fff;
+    }
+    .afftablereduit table td{
+        padding: 10px;
+    }
+    .afftablereduit table th{
+        background-color: rgb(138, 138, 138);
+        text-align: left;
+        padding: 10px;
+    }
+    .msgrduit{
+        font-size:calc(1.3rem + 1vw);
+    }
+    .utitre{
+        padding: 10px 5px;
+        display: grid;
+        grid-template-areas: 
+        "timage ttitre"
+        "tcordon tlogo"
+        "validite tlogo";
+        grid-gap: 7px;
+        border-radius: 2cap;
+        background:linear-gradient(rgb(228, 246, 252), rgb(103, 213, 247));
+        box-shadow: 15px 20px 25px rgba(0,0,0,0.8);
+        width: 90%;
+        background-color: rgb(103, 213, 247);
+        border: 1px solid black;
+    }
+    .titreimg{
+        grid-area: timage;
+        padding: 0px;
+        margin: 0px;
+    }
+    .titreimg img{
+        width: 90px;
+        height: 90px;
+        margin: 0px;
+        padding: 0px;
+        border-radius: 1cap;
+        
+    }
+    .titretext{
+        grid-area: ttitre;
+        padding: 0px;
+        margin: 0px;
+        font-size: 1.1em;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+    .titrecor{
+        grid-area: tcordon;
+        padding: 0px;
+        margin: 0px;
+        font-weight: 600;
+    }
+    .finvalidite{
+        grid-area: validite;
+        padding: 0px;
+        margin: 0px;
+    }
+    .titrelogo{
+        grid-area: tlogo;
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+        font-size: 0.8em;
+        padding-top: 3vw;
+        padding-left: 3vw;
+    }
+    .titrelogo h2{
+        padding: 0px;
+        margin: 0px;
+        letter-spacing: 7px;
+        font-size: 1.3em;
+        font-weight: bolder;
+    }
+    .mrepondre div{
+        flex-direction: column;
+        align-items: start;
+        padding: 5px;
+        gap: 10px;
+    }
+    .mrepondre div input[type="text"]{
+        width: 90%;
+        
+    }
+}
