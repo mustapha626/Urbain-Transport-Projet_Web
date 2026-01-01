@@ -13,8 +13,8 @@ l’interface utilisateur, ainsi que de fichiers de données aux formats CSV et 
 base de données.
 
 # Preparation de l'environnement :
-Après le démarrage d’un serveur web local (Apache) et d’un serveur de base de données (MySQL), le fichier /projet/database/transport.sql 
-doit être importé via phpMyAdmin.
+Après le démarrage d’un serveur web local (Apache) et d’un serveur de base de données (MySQL), vous devez créer une base de données 
+"transport" et ensuite importer le fichier "/projet/database/transport.sql" via phpMyAdmin.
 Cette opération permet la création du schéma de la base de données, des tables relationnelles et l’insertion des données initiales.
 Un utilisateur MySQL doit ensuite être créé (identifiant : client, mot de passe : client) avec les privilèges nécessaires à l’accès et à la 
 manipulation des données par l’application.
